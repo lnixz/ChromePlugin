@@ -1,0 +1,10 @@
+{
+    "name": "xinl",
+    "description": "Xinl is author of the xinl project and provides a simple implementation of the xinl library. Xinl ISC is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation and appearing in the LICENSE file at http://www.gnu.org/licenses/",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "./src/popup/popup.html",
+        "default_icon": "./src/popup/popup.icon"
+    }
+}
