@@ -10,4 +10,4 @@ function $(selector) {
     return document.querySelector(selector)
 }
 
-setDate($('#app'), getNowDate())
+// setDate($('#app'), getNowDate())
