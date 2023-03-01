@@ -1,13 +1,20 @@
-function getNowDate() {
-    return new Date()
-}
+chrome.storage.sync.get("history", ({ history }) => {
+    const contentHTML = history.length === 0
+        ? "暂无浏览记录～"
+        : history
+            .map((record) => {
+                return `
+        <div class="item-box">
+              <div class="item-box_time">${record.time}</div>
+              <a class="item-box_text" href="${record.url}">${record.title}</a>
+        </div>
+      `;
+            })
+            .join("");
+    document.querySelector('#container').innerHTML = contentHTML
+});
 
-function setDate(el,date) {
-    el.innerHTML = String(date)
-}
+document.querySelector('#new_tab').addEventListener('click', () => {
+    window.open()
+});
 
-function $(selector) {
-    return document.querySelector(selector)
-}
-
-// setDate($('#app'), getNowDate())

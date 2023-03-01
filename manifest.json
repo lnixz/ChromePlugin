@@ -3,9 +3,32 @@
     "description": "Hi👋 hope that you are well😀",
     "version": "1.0.0",
     "manifest_version": 3,
+    "homepage_url": "https://github.com/ZXinL-CN/ChromePlugin",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "./src/content/index.js"
+            ]
+        }
+    ],
     "action": {
         "default_title": "🎅",
         "default_popup": "./src/popup/popup.html",
-        "default_icon": "./src/popup/popup.png"
-    }
+        "default_icon": {
+            "16": "./assets/icon.png"
+        }
+    },
+    "icons": {
+        "16": "./assets/icon.png"
+    },
+    "background": {
+        "service_worker": "./src/background/background.js"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "devtools_page": "./src/devtools/devtools.html"
 }
