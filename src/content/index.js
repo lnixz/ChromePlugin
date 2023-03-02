@@ -9,3 +9,5 @@ chrome.storage.sync.get("history", ({ history }) => {
         history
     });
 });
+
+

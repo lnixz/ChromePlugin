@@ -18,11 +18,13 @@
         "default_title": "🎅",
         "default_popup": "./src/popup/popup.html",
         "default_icon": {
-            "16": "./assets/icon.png"
+            "16": "./icons/icon.png"
         }
     },
     "icons": {
-        "16": "./assets/icon.png"
+        "16": "./icons/icon.png",
+        "32": "./icons/icon.png",
+        "48": "./icons/icon.png"
     },
     "background": {
         "service_worker": "./src/background/background.js"
